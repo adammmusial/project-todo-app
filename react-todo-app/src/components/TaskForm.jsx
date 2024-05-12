@@ -12,26 +12,26 @@ function TaskForm() {
         <header className="app_header">
             <form>
                 <input type="text" className="task_input" value={inputValue} onChange={handleChange} placeholder="Input Value" />
+
+                <div className="task_for_bottom_line">
+                    <div>
+                        <button className="tag">HTML</button>
+                        <button className="tag">JavaScript</button>
+                        <button className="tag">CSS</button>
+                        <button className="tag">React</button>
+                    </div>
+                    <div>
+                        <select name="" id="" className="task_status">
+
+                            <option value="todo">To do</option>
+                            <option value="doing">Doing</option>
+                            <option value="done">Done</option>
+
+                        </select>
+                        <button type='submit' className="task_submit">+ Add Task</button>
+                    </div>
+                </div>
             </form>
-            <div className="task_for_bottom_line">
-                <div>
-                    <button className="tag">HTML</button>
-                    <button className="tag">JavaScript</button>
-                    <button className="tag">CSS</button>
-                    <button className="tag">React</button>
-                    <button className="tag"></button>
-                </div>
-                <div>
-                    <select name="" id="" className="task_status">
-
-                        <option value="todo">To do</option>
-                        <option value="doing">Doing</option>
-                        <option value="done">Done</option>
-
-                    </select>
-                    <button type='submit' className="task_submit">+ Add Task</button>
-                </div>
-            </div>
         </header>
     )
 };
