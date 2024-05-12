@@ -3,6 +3,10 @@
     --color-f9: #f9f9f9;
     --border: 1px solid #dfe3e6;
     --radius: 5px;
+    --sumbit-color: #6457f9;
+    --task-color-white: #fff;
+    --task-color-black: #000;
+    --task-height: 40px;
 }
 
 .app_header {
@@ -13,9 +17,12 @@
   }
 
 .app_header > form {
-    width: 40%;
+    width: 35%;
 }
 
+.task_input::placeholder{
+    color: #686868;
+}
 
 .task_input{
     font-size: 20px;
@@ -43,4 +50,30 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+}
+
+.task_status {
+    font-size: 0.8rem;
+    font-weight: var(--weight);
+    border-radius: var(--radius);
+    border-radius: var(--radius);
+    width: 100px;
+    height: var(--task-height);
+    margin-right: 10px;
+    padding: 0 10px;
+    color: var(--task-color-black);
+}
+
+.task_submit {
+    font-size: 0.8rem;
+    font-weight: var(--weight);
+    border-radius: var(--radius);
+    border-radius: var(--radius);
+    background-color: var(--sumbit-color);
+    color: var(--task-color-white);
+    width: 80px;
+    height: var(--task-height);
+    padding: 0 5px;
+    border: none;
 }
