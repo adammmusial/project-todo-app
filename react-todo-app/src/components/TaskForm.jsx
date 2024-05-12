@@ -24,8 +24,22 @@ function TaskForm() {
     }
     
     const selectTag = (tag) => {
-        console.log(tag)
+        if (taskData.tags.some(item => item === tag )){
+
+            const filterTags = taskData.tags.filter(item => item !== tag)
+            
+            return setTaskData((prev) => {
+                return {...prev, tags: [filterTags]}
+            })
+        } else {
+            setTaskData(prev =>  {
+                return {...prev, tags: [...prev.tags, tag]}
+            } )
+        }
     }
+
+    console.log(taskData.task)
+
 
     return (
         <header className="app_header">
