@@ -2,7 +2,7 @@ import React from 'react'
 import Tag from './Tag'
 import deleteIcon from '../assets/delete.png'
 import './TaskCard.css'
-
+    
 const TaskCard = ({title}) => {
   return (
         <article className="task_card">

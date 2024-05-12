@@ -68,8 +68,5 @@
     border: none;
 }
 
-.task_card_bottom_line {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+
+

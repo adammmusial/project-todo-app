@@ -3,26 +3,53 @@ import Tag from "./Tag";
 
 
 function TaskForm() {
-    const [inputValue, setInputValue] = useState('');
+
+    const [taskData, setTaskData] = useState({
+        task: "",
+        status: "todo",
+        tags: [],
+    })
 
     const handleChange = (event) => {
-        setInputValue(event.target.value);
-    };
+        const {name,value} = event.target
+
+        setTaskData((prev) => {
+            return {...prev, [name]: value}
+        })
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log(taskData);
+    }
+    
+    const selectTag = (tag) => {
+        console.log(tag)
+    }
 
     return (
         <header className="app_header">
-            <form>
-                <input type="text" className="task_input" value={inputValue} onChange={handleChange} placeholder="Input Value" />
+            <form onSubmit={handleSubmit}>
+                <input 
+                    type="text" 
+                    name="task"
+                    className="task_input" 
+                    onChange={handleChange} 
+                    placeholder="Input Value" />
 
                 <div className="task_for_bottom_line">
                     <div>
-                        <Tag name="HTML"/>
-                        <Tag name="JavaScript"/>
-                        <Tag name="CSS"/>
-                        <Tag name="React"/>
+                        <Tag name="HTML" selectTag={selectTag} />
+                        <Tag name="JavaScript" selectTag={selectTag} />
+                        <Tag name="CSS" selectTag={selectTag}/>
+                        <Tag name="React"selectTag={selectTag} />
                     </div>
                     <div>
-                        <select name="" id="" className="task_status">
+                        <select 
+                            name="status" 
+                            id="" 
+                            className="task_status" 
+                            onChange={handleChange}>
 
                             <option value="todo">To do</option>
                             <option value="doing">Doing</option>
