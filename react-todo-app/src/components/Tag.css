@@ -1,0 +1,20 @@
+:root{
+    --weight:500;
+    --color-f9: #f9f9f9;
+    --border: 1px solid #dfe3e6;
+    --radius: 5px;
+    --sumbit-color: #6457f9;
+    --task-color-white: #fff;
+    --task-color-black: #000;
+    --task-height: 40px;
+}
+
+.tag {
+    font-size: 14px;
+    font-weight: var(--weight);
+    border-radius: var(--radius);
+    border: var(--border);
+    margin-right: 10px;
+    padding: 2px 10px;
+    cursor: pointer;
+}

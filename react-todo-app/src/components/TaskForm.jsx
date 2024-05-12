@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Tag from "./Tag";
 
 
 function TaskForm() {
@@ -15,10 +16,10 @@ function TaskForm() {
 
                 <div className="task_for_bottom_line">
                     <div>
-                        <button className="tag">HTML</button>
-                        <button className="tag">JavaScript</button>
-                        <button className="tag">CSS</button>
-                        <button className="tag">React</button>
+                        <Tag name="HTML"/>
+                        <Tag name="JavaScript"/>
+                        <Tag name="CSS"/>
+                        <Tag name="React"/>
                     </div>
                     <div>
                         <select name="" id="" className="task_status">

@@ -36,16 +36,6 @@
     width: 100%;
 }
 
-.tag {
-    font-size: 0.7rem;
-    font-weight: var(--weight);
-    border-radius: var(--radius);
-    border: var(--border);
-    margin-right: 10px;
-    padding: 2px 10px;
-    cursor: pointer;
-}
-
 .task_for_bottom_line {
     display: flex;
     align-items: center;
