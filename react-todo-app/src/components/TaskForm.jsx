@@ -27,9 +27,10 @@ function TaskForm() {
         if (taskData.tags.some(item => item === tag )){
 
             const filterTags = taskData.tags.filter(item => item !== tag)
-            
+
             return setTaskData((prev) => {
-                return {...prev, tags: [filterTags]}
+
+                return {...prev, tags: filterTags}
             })
         } else {
             setTaskData(prev =>  {
@@ -38,7 +39,7 @@ function TaskForm() {
         }
     }
 
-    console.log(taskData.task)
+    console.log(taskData.tags)
 
 
     return (
