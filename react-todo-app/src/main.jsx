@@ -7,6 +7,5 @@ import TaskForm from './components/TaskForm.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
-    <TaskForm />
   </React.StrictMode>,
 )
