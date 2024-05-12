@@ -1,0 +1,58 @@
+:root{
+    --weight:500;
+    --color-f9: #f9f9f9;
+    --border: 1px solid #dfe3e6;
+    --radius: 10px;
+    --sumbit-color: #6457f9;
+    --task-color-white: #fff;
+    --task-color-black: #000;
+    --task-height: 40px;
+}
+
+.task_card {
+    max-width: 100%;
+    min-width: 100px;
+    border: var(--border);
+    padding: 10px;
+    border-radius: var(--radius);
+    margin: 15px 0;
+
+}
+
+.task_text {
+    font-weight: var(--weight);
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.task_delete {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.task_card_bottom_line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task_delete:hover {
+    background-color: #ebebeb;
+}
+
+.delete_icon {
+    width: 20px;
+    opacity: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.delete_icon:hover{
+    opacity: 80%;
+    
+}
