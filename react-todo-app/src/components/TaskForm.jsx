@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Tag from "./Tag";
 
 
-function TaskForm() {
+function TaskForm({setTasks}) {
 
     const [taskData, setTaskData] = useState({
         task: "",
@@ -21,6 +21,7 @@ function TaskForm() {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(taskData);
+        setTasks((prev) => {return [...prev, taskData]})
     }
 
     const checkTag = (tag) => {
@@ -42,8 +43,6 @@ function TaskForm() {
             } )
         }
     }
-
-    console.log(taskData.tags)
 
 
     return (
