@@ -22,6 +22,11 @@ function TaskForm({setTasks}) {
         e.preventDefault()
         console.log(taskData);
         setTasks((prev) => {return [...prev, taskData]})
+        setTaskData({
+            task: "",
+            status: "todo",
+            tags: [],
+        })
     }
 
     const checkTag = (tag) => {
