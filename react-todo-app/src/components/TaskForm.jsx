@@ -56,6 +56,7 @@ function TaskForm({setTasks}) {
                 <input 
                     type="text" 
                     name="task"
+                    value={taskData.task}
                     className="task_input" 
                     onChange={handleChange} 
                     placeholder="Input Value" />
@@ -72,6 +73,7 @@ function TaskForm({setTasks}) {
                             name="status" 
                             id="" 
                             className="task_status" 
+                            value={taskData.status}
                             onChange={handleChange}>
 
                             <option value="todo">To do</option>
