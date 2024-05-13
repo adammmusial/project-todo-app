@@ -22,6 +22,10 @@ function TaskForm() {
         e.preventDefault()
         console.log(taskData);
     }
+
+    const checkTag = (tag) => {
+        return taskData.tags.some(item => item === tag )
+    }
     
     const selectTag = (tag) => {
         if (taskData.tags.some(item => item === tag )){
@@ -54,10 +58,10 @@ function TaskForm() {
 
                 <div className="task_for_bottom_line">
                     <div>
-                        <Tag name="HTML" selectTag={selectTag} />
-                        <Tag name="JavaScript" selectTag={selectTag} />
-                        <Tag name="CSS" selectTag={selectTag}/>
-                        <Tag name="React"selectTag={selectTag} />
+                        <Tag name="HTML" selectTag={selectTag} checkTag={checkTag('HTML')}/>
+                        <Tag name="JavaScript" selectTag={selectTag} checkTag={checkTag('JavaScript')} />
+                        <Tag name="CSS" selectTag={selectTag} checkTag={checkTag('CSS')}/>
+                        <Tag name="React"selectTag={selectTag} checkTag={checkTag('React')} />
                     </div>
                     <div>
                         <select 
