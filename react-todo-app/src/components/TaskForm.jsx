@@ -10,6 +10,8 @@ function TaskForm({setTasks}) {
         tags: [],
     })
 
+    
+
     const handleChange = (event) => {
         const {name,value} = event.target
 
