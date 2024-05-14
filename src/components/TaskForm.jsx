@@ -54,39 +54,42 @@ function TaskForm({setTasks}) {
 
     return (
         <header className="app_header">
-            <form onSubmit={handleSubmit}>
-                <input 
-                    type="text" 
-                    name="task"
-                    value={taskData.task}
-                    className="task_input" 
-                    onChange={handleChange} 
-                    placeholder="Input Value" />
+            <div className="header_container">
 
-                <div className="task_for_bottom_line">
-                    <div>
-                        <Tag name="HTML" selectTag={selectTag} checkTag={checkTag('HTML')}/>
-                        <Tag name="JavaScript" selectTag={selectTag} checkTag={checkTag('JavaScript')} />
-                        <Tag name="CSS" selectTag={selectTag} checkTag={checkTag('CSS')}/>
-                        <Tag name="React"selectTag={selectTag} checkTag={checkTag('React')} />
+                <form onSubmit={handleSubmit}>
+                    <input 
+                        type="text" 
+                        name="task"
+                        value={taskData.task}
+                        className="task_input" 
+                        onChange={handleChange} 
+                        placeholder="Input Value" />
+
+                    <div className="task_for_bottom_line">
+                        <div className="tag_container">
+                            <Tag name="HTML" selectTag={selectTag} checkTag={checkTag('HTML')}/>
+                            <Tag name="JavaScript" selectTag={selectTag} checkTag={checkTag('JavaScript')} />
+                            <Tag name="CSS" selectTag={selectTag} checkTag={checkTag('CSS')}/>
+                            <Tag name="React"selectTag={selectTag} checkTag={checkTag('React')} />
+                        </div>
+                        <div className="button_container">
+                            <select 
+                                name="status" 
+                                id="" 
+                                className="task_status" 
+                                value={taskData.status}
+                                onChange={handleChange}>
+
+                                <option value="todo">To do</option>
+                                <option value="doing">Doing</option>
+                                <option value="done">Done</option>
+
+                            </select>
+                            <button type='submit' className="task_submit">+ Add Task</button>
+                        </div>
                     </div>
-                    <div>
-                        <select 
-                            name="status" 
-                            id="" 
-                            className="task_status" 
-                            value={taskData.status}
-                            onChange={handleChange}>
-
-                            <option value="todo">To do</option>
-                            <option value="doing">Doing</option>
-                            <option value="done">Done</option>
-
-                        </select>
-                        <button type='submit' className="task_submit">+ Add Task</button>
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </header>
     )
 };

@@ -11,7 +11,6 @@ const Tag = ({name,selectTag,checkTag}) => {
     }
   return (
     <button 
-    
     type="button" 
     className='tag'
     style={checkTag ? tagStyle[name] : tagStyle.default}
