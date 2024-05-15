@@ -14,10 +14,7 @@ I created a to-do app using React to manage tasks with statuses like "To-do", "D
 - **Conditional Rendering**: Implemented conditional rendering to dynamically manage and display task statuses based on their state.
 
 ## Technologies Used
-<img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg" width="50"> 
-<img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" width="40"> 
-<img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original-wordmark.svg" width="50"> 
-<img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original-wordmark.svg" width="50">
+<img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg" width="50"> <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" width="40"> <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original-wordmark.svg" width="50"> <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original-wordmark.svg" width="50">
 
 
 ## Resources Used
